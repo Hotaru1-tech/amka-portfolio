@@ -7,4 +7,8 @@ export const certs = [
   { title: 'PYTHON (BASIC)',             level: 'Basic',        url: 'https://www.hackerrank.com/certificates/380a599eb56b' },
   { title: 'CSS (BASIC)',                level: 'Basic',        url: 'https://www.hackerrank.com/certificates/a134d98488f6' },
   { title: 'PROBLEM SOLVING (BASIC)',    level: 'Basic',        url: 'https://www.hackerrank.com/certificates/f374ff4b8815' },
+  { title: 'SQL (BASIC)',                level: 'Basic',        url: 'https://www.hackerrank.com/certificates/b26375f49d71' },
+  { title: 'SQL (INTERMEDIATE)',         level: 'Intermediate', url: 'https://www.hackerrank.com/certificates/f2022a1c6335' },
+  { title: 'SQL (ADVANCED)',             level: 'Advanced',     url: 'https://www.hackerrank.com/certificates/303dbd084b6d' },
+  { title: 'NODE.JS (INTERMEDIATE)',     level: 'Intermediate', url: 'https://www.hackerrank.com/certificates/1ede34acfd29' },
 ]

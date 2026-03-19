@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 
 const STATS = [
-  { num: 17,  label: 'AGE' },
-  { num: 4,   label: 'PROJECTS' },
-  { num: 8,   label: 'CERTS' },
-  { num: 4,   label: 'PROJECTS' },
+  { num: 18,  label: 'AGE' },
+  { num: 6,   label: 'PROJECTS' },
+  { num: 12,  label: 'CERTS' },
+  { num: 6,   label: 'PROJECTS' },
 ]
 
 function useTypewriter(text, speed = 130) {

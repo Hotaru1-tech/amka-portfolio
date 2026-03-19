@@ -24,41 +24,67 @@ export default function Projects() {
           <h2 className="font-mono text-4xl text-light">MY <span className="text-cyan">PROJECTS</span></h2>
           <div className="w-14 h-0.5 mt-3 mb-12" style={{background:'linear-gradient(90deg,#00d4ff,transparent)'}} />
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map(p => {
               const c = colorMap[p.color]
               return (
-                <div key={p.id} className={`rounded-xl border border-border ${c.border} transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(0,0,0,0.5)] relative overflow-hidden`}
+                <div key={p.id} className={`rounded-xl border border-border ${c.border} transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] relative overflow-hidden flex flex-col`}
                   style={{background:'#0c1220'}}>
                   {/* top accent */}
-                  <div className={`absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r ${c.top}`} />
+                  <div className={`absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r ${c.top} z-10`} />
 
                   {/* screenshot or icon */}
-                  {p.screenshot ? (
-                    <div className="w-full h-40 overflow-hidden">
-                      <img src={p.screenshot} alt={p.title} className="w-full h-full object-cover" />
+                  <div className="relative group/img h-48 overflow-hidden bg-black/20">
+                    {p.screenshot ? (
+                      <img src={p.screenshot} alt={p.title} className="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center text-5xl opacity-40">
+                        {p.icon}
+                      </div>
+                    )}
+                    <div className="absolute inset-0 bg-bg/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                       <span className="font-mono text-[10px] text-light tracking-widest border border-light/20 px-4 py-2 rounded bg-bg/80">VIEW DETAILS</span>
                     </div>
-                  ) : null}
+                  </div>
 
-                  <div className="p-6">
+                  <div className="p-6 flex-1 flex flex-col">
                     {/* status badge */}
-                    <span className="absolute top-4 right-4 font-mono text-[9px] px-2 py-0.5 rounded border text-green border-green/25 bg-green/10">
-                      ● LIVE
-                    </span>
-
-                    <div className="text-3xl mb-3">{p.icon}</div>
-                    <h3 className="font-mono text-sm text-light tracking-widest mb-2">{p.title}</h3>
-                    <p className="text-[13px] text-dim leading-relaxed mb-4">{p.desc}</p>
-
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {p.tags.map(t => (
-                        <span key={t} className={`font-mono text-[9px] px-2.5 py-1 rounded border ${c.tag}`}>{t}</span>
-                      ))}
+                    <div className="flex justify-between items-start mb-4">
+                      <div className="text-3xl">{p.icon}</div>
+                      <span className="font-mono text-[9px] px-2 py-0.5 rounded border text-green border-green/25 bg-green/10">
+                        ● LIVE
+                      </span>
                     </div>
 
-                    <div className="flex gap-4">
-                      {p.demo && <a href={p.demo} target="_blank" rel="noopener noreferrer" className="font-mono text-[10px] text-dim hover:text-cyan transition-colors tracking-widest">⬡ LIVE DEMO</a>}
-                      {p.github && <a href={p.github} target="_blank" rel="noopener noreferrer" className="font-mono text-[10px] text-dim hover:text-cyan transition-colors tracking-widest">⬡ GITHUB</a>}
+                    <h3 className="font-mono text-sm text-light tracking-widest mb-2 uppercase">{p.title}</h3>
+                    <p className="text-[13px] text-dim leading-relaxed mb-6 flex-1">{p.desc}</p>
+
+                    <div className="space-y-4 mt-auto">
+                      <div className="flex flex-wrap gap-2">
+                        {p.tags.map(t => (
+                          <span key={t} className={`font-mono text-[9px] px-2.5 py-1 rounded border ${c.tag}`}>{t}</span>
+                        ))}
+                      </div>
+
+                      <div className="pt-4 border-t border-white/5 flex gap-5">
+                        {p.demo && (
+                          <a href={p.demo} target="_blank" rel="noopener noreferrer" 
+                            className="font-mono text-[10px] text-cyan hover:text-light transition-colors tracking-widest flex items-center gap-2">
+                            <span className="text-[12px]">⬡</span> LIVE DEMO
+                          </a>
+                        )}
+                        {p.github && (
+                          <a href={p.github} target="_blank" rel="noopener noreferrer" 
+                            className="font-mono text-[10px] text-dim hover:text-cyan transition-colors tracking-widest flex items-center gap-2">
+                            <span className="text-[12px]">⬡</span> GITHUB
+                          </a>
+                        )}
+                        {!p.demo && !p.github && (
+                          <span className="font-mono text-[10px] text-dim/50 tracking-widest italic flex items-center gap-2">
+                            <span className="text-[12px]">⬡</span> PRIVATE SOURCE
+                          </span>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
