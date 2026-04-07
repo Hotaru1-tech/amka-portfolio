@@ -36,7 +36,7 @@ export default function About() {
                 </p>
               </div>
               <p className="text-[15px] text-dim leading-relaxed">Hey, I'm <strong className="text-light">Amka</strong> — a 18-year-old full stack engineer based in Ulaanbaatar. I trained at <strong className="text-light">Indra Cyber Institute</strong> where I built a strong foundation in web development.</p>
-              <p className="text-[15px] text-dim leading-relaxed">I've built <strong className="text-light">6 real projects</strong> and earned <strong className="text-light">12 HackerRank certifications</strong> across frontend, backend, and algorithms — and I'm just getting started.</p>
+              <p className="text-[15px] text-dim leading-relaxed">I've built <strong className="text-light">7 real projects</strong> and earned <strong className="text-light">12 HackerRank certifications</strong> across frontend, backend, and algorithms — and I'm just getting started.</p>
               <p className="text-[15px] text-dim leading-relaxed">I'm hungry to grow, fast to learn, and ready to contribute to real teams and real products.</p>
             </div>
 

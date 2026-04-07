@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react'
 
 const STATS = [
   { num: 18,  label: 'AGE' },
-  { num: 6,   label: 'PROJECTS' },
+  { num: 7,   label: 'PROJECTS' },
   { num: 12,  label: 'CERTS' },
-  { num: 6,   label: 'PROJECTS' },
+  { num: 1,   label: 'SAAS APP' },
 ]
 
 function useTypewriter(text, speed = 130) {
@@ -63,7 +63,7 @@ export default function Hero() {
         </p>
         <p className="text-dim leading-relaxed max-w-xl mx-auto mb-9 animate-[fadeUp_0.7s_ease_0.8s_forwards] opacity-0"
           style={{fontSize:'15px'}}>
-          17 years old. Trained at Indra Cyber Institute. Already building real, full-stack applications — clean code, fast interfaces, powerful backends.
+          18 years old. Trained at Indra Cyber Institute. Already building real, full-stack applications — clean code, fast interfaces, powerful backends.
         </p>
         <div className="flex gap-4 justify-center flex-wrap animate-[fadeUp_0.7s_ease_1s_forwards] opacity-0">
           <a href="#projects" className="font-mono text-[10px] tracking-[3px] px-7 py-3 rounded border border-cyan/50 text-cyan bg-cyan/7 hover:bg-cyan/15 hover:shadow-[0_0_24px_rgba(0,212,255,0.3)] transition-all">
