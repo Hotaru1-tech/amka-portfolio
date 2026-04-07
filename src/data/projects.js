@@ -72,4 +72,16 @@ export const projects = [
     status: 'live',
     color: 'cyan',
   },
+  {
+    id: 7,
+    title: 'MULTI-TENANT SAAS PLATFORM',
+    icon: '🧩',
+    desc: 'Task management for modern teams.',
+    tags: ['SaaS', 'Task Management', 'Multi-Tenant'],
+    screenshot: '/screenshots/Multi-tenant SAAS.png',
+    demo: 'https://multitask-frontend.vercel.app/',
+    github: 'https://github.com/Hotaru1-tech/Multitask.git',
+    status: 'live',
+    color: 'purple',
+  },
 ]
