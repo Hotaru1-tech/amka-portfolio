@@ -43,7 +43,7 @@ export const projects = [
     desc: 'A sleek personal portfolio site built with React and Tailwind CSS, deployed on Vercel. Showcases projects, skills, and contact info with a clean responsive design.',
     tags: ['React', 'Tailwind CSS', 'Vercel'],
     screenshot: '/screenshots/portfolio.png',
-    demo: 'https://amka-port.vercel.app',
+    demo: 'https://portfolio1-one-wheat.vercel.app',
     github: 'https://github.com/Hotaru1-tech',
     status: 'live',
     color: 'purple',
